@@ -19,6 +19,18 @@ code { font-size: 0.92em; }
   --nav-h: 64px;
   --max: 1120px;
   --shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+  /* Colour tokens (were referenced but never defined, so dark sections fell back to near-black text) */
+  --color-fg: #f5f5f7;
+  --color-ink: #1d1d1f;
+  --color-white: #ffffff;
+  --color-red: #e10613;
+  --color-red-text: #c10510;
+  --color-red-on-dark: #ff5a63;
+  --color-muted: #48484c;
+  --color-faint: #5f5f64;
+  --color-line: rgba(0, 0, 0, 0.12);
+  --font-sans: "Instrument Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-serif: "Instrument Serif", Georgia, "Times New Roman", serif;
 }
 
 .skip {
@@ -89,7 +101,7 @@ code { font-size: 0.92em; }
   font-weight: 500;
   letter-spacing: 0.18em;
   font-size: 9px;
-  color: rgba(245, 245, 247, 0.62);
+  color: rgba(245, 245, 247, 0.78);
   margin-top: 1px;
 }
 .nav-links {
@@ -238,10 +250,11 @@ a:focus-visible {
   font-weight: 650;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--color-red);
+  color: var(--color-red-text);
 }
-.band-dark .kicker {
-  color: #ff5a63;
+.band-dark .kicker,
+.hero .kicker {
+  color: var(--color-red-on-dark);
 }
 h1,
 h2,
@@ -327,7 +340,7 @@ h2 {
 .hero-shot figcaption {
   margin: 0;
   padding: 12px 16px 14px;
-  color: rgba(245, 245, 247, 0.55);
+  color: rgba(245, 245, 247, 0.68);
   font-size: 12px;
   letter-spacing: 0.01em;
 }
@@ -350,7 +363,7 @@ h2 {
   justify-content: space-between;
   align-items: baseline;
   margin-bottom: 14px;
-  color: rgba(245, 245, 247, 0.55);
+  color: rgba(245, 245, 247, 0.68);
   font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -439,7 +452,7 @@ h2 {
 }
 .spec-row p {
   margin: 0;
-  color: rgba(245, 245, 247, 0.6);
+  color: rgba(245, 245, 247, 0.7);
   font-size: 14px;
 }
 
@@ -794,7 +807,7 @@ blockquote footer {
 .form-status {
   margin: 0;
   font-size: 13px;
-  color: rgba(245, 245, 247, 0.55);
+  color: rgba(245, 245, 247, 0.68);
   line-height: 1.45;
 }
 .form-status.ok {
@@ -827,7 +840,7 @@ blockquote footer {
 }
 .fine {
   margin-top: 22px;
-  color: rgba(245, 245, 247, 0.4);
+  color: rgba(245, 245, 247, 0.66);
   font-size: 12px;
 }
 
